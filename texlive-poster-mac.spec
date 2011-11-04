@@ -1,3 +1,9 @@
+# revision 18305
+# category Package
+# catalog-ctan /macros/generic/poster
+# catalog-date 2010-05-15 22:56:34 +0200
+# catalog-license lppl
+# catalog-version 1.1
 Name:		texlive-poster-mac
 Version:	1.1
 Release:	1
@@ -50,6 +56,7 @@ and PostScript printers.
 %doc %{_texmfdistdir}/doc/generic/poster-mac/poster-doc.tex
 %doc %{_texmfdistdir}/doc/generic/poster-mac/poster1.pdf
 %doc %{_texmfdistdir}/doc/generic/poster-mac/poster2.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ and PostScript printers.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
