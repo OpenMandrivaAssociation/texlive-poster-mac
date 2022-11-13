@@ -1,18 +1,12 @@
-# revision 18305
-# category Package
-# catalog-ctan /macros/generic/poster
-# catalog-date 2010-05-15 22:56:34 +0200
-# catalog-license lppl
-# catalog-version 1.1
 Name:		texlive-poster-mac
-Version:	1.1
-Release:	11
+Version:	18305
+Release:	1
 Summary:	Make posters and banners with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/poster
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poster-mac.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poster-mac.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poster-mac.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poster-mac.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ page. This is true of most printers, including laser printers
 and PostScript printers.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,10 @@ and PostScript printers.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-2
-+ Revision: 755024
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
-+ Revision: 719289
-- texlive-poster-mac
-- texlive-poster-mac
-- texlive-poster-mac
-- texlive-poster-mac
-
