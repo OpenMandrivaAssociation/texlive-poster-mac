@@ -1,6 +1,6 @@
 Name:		texlive-poster-mac
 Version:	18305
-Release:	1
+Release:	2
 Summary:	Make posters and banners with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/poster
