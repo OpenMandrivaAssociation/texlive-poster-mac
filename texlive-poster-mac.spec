@@ -3,7 +3,7 @@ Version:	18305
 Release:	2
 Summary:	Make posters and banners with TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/poster
+URL:		https://www.ctan.org/tex-archive/macros/generic/poster
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poster-mac.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poster-mac.doc.r%{version}.tar.xz
